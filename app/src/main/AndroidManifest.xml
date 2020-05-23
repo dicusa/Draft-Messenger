@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.example.chitchatkt">
+
+    <uses-feature android:name="android.hardware.fingerprint" />
+
+    <uses-permission-sdk-23 android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+    <uses-permission-sdk-23 android:name="android.permission.CALL_PHONE" />
+    <uses-permission-sdk-23 android:name="android.permission.READ_CONTACTS" />
+    <uses-permission-sdk-23 android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission-sdk-23 android:name="android.permission.READ_SMS" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+            android:name=".apputils.AppController"
+            android:allowBackup="true"
+            android:fullBackupContent="true"
+            android:icon="@drawable/applogo100"
+            android:label="@string/app_name"
+            android:roundIcon="@drawable/applogo100"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".ImagesFullscreenActivity" />
+        <activity android:name=".SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+                android:name=".reciever.NetworkChangeReciever"
+                android:enabled="true">
+            <intent-filter>
+                <action
+                        android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                        tools:ignore="BatteryLife" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ChatScreenActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MessagingActivity" />
+        </activity>
+        <activity android:name=".NewMessagesActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MessagingActivity" />
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterationActivity" />
+        <activity android:name=".MessagingActivity" />
+    </application>
+
+</manifest>

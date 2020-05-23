@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"><data/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilepicture"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/defaultprofilepicture48"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"/>
+
+        <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                app:layout_constraintStart_toEndOf="@id/profilepicture"
+                app:layout_constraintTop_toTopOf="@id/profilepicture"
+                android:layout_marginStart="15dp"
+        />
+
+        <TextView
+                android:id="@+id/time"
+                android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:text="10:54 am"
+                  android:textSize="14sp"
+                  android:textColor="#64E415"
+                  app:layout_constraintTop_toTopOf="@id/username"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  android:layout_marginEnd="15dp"
+        />
+
+        <TextView
+                android:id="@+id/message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="this is a message hello how are khama khake jana "
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/profilepicture"
+                app:layout_constraintTop_toBottomOf="@id/username"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="7dp"
+                android:maxEms="5"
+                android:maxLength="30"
+                android:ellipsize="middle"
+                android:maxWidth="270dp"
+                android:singleLine="true"/>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="0.5dip"
+                app:layout_constraintStart_toStartOf="@id/username"
+                app:layout_constraintTop_toBottomOf="@id/profilepicture"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="7dp"
+                android:background="#A9EEEEEE"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"><data/>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="30dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/custom_dialog_image_quality_bg">
+
+    <TextView
+            android:id="@+id/dialogheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image Quality?"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/dialogtext"
+            app:layout_constraintTop_toTopOf="parent" />
+<TextView
+        android:id="@+id/dialogtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Choose image quality to be send"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/original"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialogheading" />
+
+    <Button
+            android:id="@+id/original"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Original"
+            app:layout_constraintEnd_toStartOf="@id/compressed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dialogtext" />
+
+    <Button
+            android:id="@+id/compressed"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Compressed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/original"
+            app:layout_constraintTop_toBottomOf="@id/dialogtext" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

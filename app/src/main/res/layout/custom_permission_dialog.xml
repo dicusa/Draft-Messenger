@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"><data/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#CCFFFFFF"
+            android:padding="10dp"
+    >
+
+        <ImageView
+                android:id="@+id/progressbar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/camera_chat_icon_24dp"
+                />
+
+        <TextView
+                android:id="@+id/progresstext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/progressbar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/cancelButton"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="25dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:text="Uploading..."
+        />
+
+        <TextView
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/progresstext"
+            app:layout_constraintEnd_toStartOf="@id/grantButton"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="10dp"
+            android:text="CANCEL"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#F33072"
+            />
+        <TextView
+            android:id="@+id/grantButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progresstext"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="10dp"
+            android:text="GRANT"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#F33072"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

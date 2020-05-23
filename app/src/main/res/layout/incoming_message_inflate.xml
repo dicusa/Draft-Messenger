@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+><data/>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ChatScreenActivity">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/incoming_chat_bg"
+            android:maxWidth="300dp">
+        <TextView
+                android:id="@+id/incomingmessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/messageintime"
+                android:textSize="17sp"
+                android:textColor="#000000"
+                android:padding="5dp"
+                android:typeface="sans"
+                android:text="hi this is yash how you doing i am just testing my application"
+                android:maxWidth="230dp"
+                android:autoLink="web"
+                android:textIsSelectable="true"
+
+        />
+        <TextView
+                android:id="@+id/messageintime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/incomingmessage"
+                android:text="12:58 pm"
+                android:textSize="12sp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+        />
+        <TextView
+                android:id="@+id/messageimagetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/chatimagein"
+                android:text="12:58 pm"
+                android:textSize="12sp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:visibility="gone"/>
+
+        <ImageView
+                android:id="@+id/chatimagein"
+                android:layout_width="wrap_content"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:src="@drawable/defaultprofilepicture72"
+                android:visibility="gone"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

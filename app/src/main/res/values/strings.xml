@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Draft</string>
+    <string name="authenticating">Authenticating...</string>
+    <string name="registering">Registering Please Wait...</string>
+</resources>
