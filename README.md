@@ -15,7 +15,7 @@
 It is a cloud based realtime one-to-one chat application. The chats are stored at the firebase in well structured manner.
 Therefore it uses a small amount of user device memory.
 
-1. Fronend :
+1. Frontend :
    - It contains several features to create a chatting environment between two users.
    - It allows user to register with Email and Password.
    - It allows to click images from the application to send directly.
